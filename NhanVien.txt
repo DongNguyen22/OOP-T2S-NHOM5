@@ -1,0 +1,10 @@
+NV01;Nguyen Van A;Nam;0901111111;Ha Noi;NV
+NV02;Tran Thi B;Nu;0902222222;Hai Phong;NV
+NV03;Le Van C;Nam;0903333333;Da Nang;NV
+NV04;Pham Thi D;Nu;0904444444;Hue;QL
+NV06;Nguyen Thi F;Nu;0906666666;Ha Noi;QL
+NV07;Vu Van G;Nam;0907777777;Hai Duong;NV
+NV08;Do Thi H;Nu;0908888888;Quang Ninh;NV
+NV09;Dang Van I;Nam;0909999999;Thanh Hoa;NV
+NV10;Luong bao han;Nu;0910000000;Nam Dinh;NV
+nv012;dong dep trai;nam;091218291;tp KH;QL

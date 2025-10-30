@@ -1,0 +1,11 @@
+KH01;Nguyen Van An;0987123456;Nam;12 Nguyen Trai, Ha Noi
+KH02;Tran Thi Binh;0912345678;Nu;45 Le Loi, Da Nang
+KH03;Le Minh Tuan;0978567890;Nam;78 Cach Mang Thang 8, TP HCM
+KH04;Pham Thu Hang;0905123987;Nu;23 Tran Phu, Hai Phong
+KH06;Hoang Thi Lan;0988345671;Nu;34 Ly Thuong Kiet, Ha Noi
+KH07;Vu Duc Manh;0909998877;Nam;89 Hai Ba Trung, Hue
+KH08;Ngo Thi Huong;0912555666;Nu;22 Nguyen Dinh Chieu, TP HCM
+KH09;Trinh Quang Huy;0981777333;Nam;67 Le Duan, Da Nang
+KH10;Phan Thi Mai;0974666777;Nu;11 Phan Chu Trinh, Nha Trang
+kh012;dong;nam;098813183;tp KH
+kh011;diep;nam;0919182191;tp HCM
