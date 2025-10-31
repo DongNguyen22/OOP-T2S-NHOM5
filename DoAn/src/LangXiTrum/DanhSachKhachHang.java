@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 public class DanhSachKhachHang implements XuLiDuLieu {
     private KhachHang[] dsKH;
-    int n;
+    private int n;
     Scanner sc= new Scanner(System.in);
     public DanhSachKhachHang(){
         dsKH = null;
