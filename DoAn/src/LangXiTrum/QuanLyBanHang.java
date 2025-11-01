@@ -6,9 +6,11 @@ public class QuanLyBanHang {
     Scanner sc= new Scanner(System.in);
     public static DanhSachConNguoi dsConNguoi = new DanhSachConNguoi();
     public static DanhSachSanPham dSachSanPham = new DanhSachSanPham();
+    public static DanhSachHoaDon dSachHoaDon = new DanhSachHoaDon();
     public QuanLyBanHang(){
         dsConNguoi.docFile();
         dSachSanPham.docFile();
+        dSachHoaDon.docFile();
     }
     public void menuChinh() {
         int choice;
@@ -31,9 +33,9 @@ public class QuanLyBanHang {
                 case 1:
                     menuSanPham();
                     break;
-                // case 2:
-                //     menuHoaDon();
-                //     break;
+                case 2:
+                    menuHoaDon();
+                    break;
                 // case 3:
                 //     menuPhieuNhap();
                 //     break;
@@ -44,8 +46,9 @@ public class QuanLyBanHang {
                     menuNhanVien();
                     break;
                 case 0:
-                    dsConNguoi.docFile();
+                    dsConNguoi.ghiFile();
                     dSachSanPham.ghiFile();
+                    dSachHoaDon.ghiFile();
                     System.out.println("-> Thoat chuong trinh. Tam biet!");
                     break;
                 default:
@@ -142,7 +145,7 @@ public class QuanLyBanHang {
                     System.out.println("Danh sach khach hang tim thay:");
                     for(KhachHang kh : dskh) System.out.println(kh);
                 }              
-    //San Pham
+    // ===================== MENU CON Sản Phẩm =====================
     public void menuSanPham() {
         int chon;
         do {
@@ -201,4 +204,78 @@ public class QuanLyBanHang {
         if (sp != null) System.out.println("==> Tim thay: " + sp);
         else System.out.println("Khong tim thay san pham co ma: " + ma);
     }
+    // ===================== MENU CON Hóa Đơn =====================
+    public void menuHoaDon() {
+    int chon;
+    do {
+        System.out.println("========== MENU QUAN LY HOA DON ==========");
+        System.out.println("1. Xem danh sach hoa don");
+        System.out.println("2. Them hoa don moi");
+        System.out.println("3. Sua thong tin hoa don");
+        System.out.println("4. Xoa hoa don");
+        System.out.println("5. Tim hoa don theo ma hoa don");
+        System.out.println("6. Tim hoa don theo ma nhan vien");
+        System.out.println("7. Doc du lieu tu file");
+        System.out.println("8. Ghi du lieu ra file");
+        System.out.println("0. Thoat");
+        System.out.print("Nhap lua chon: ");
+        chon=sc.nextInt();
+        sc.nextLine();
+
+        switch (chon) {
+            case 1:
+                dSachHoaDon.xuat();
+                break;
+            case 2:
+                dSachHoaDon.them();
+                break;
+            case 3:
+                System.out.print("Nhap ma hoa don can sua: ");
+                String maSua = sc.nextLine();
+                dSachHoaDon.sua(maSua);
+                break;
+            case 4:
+                System.out.print("Nhap ma hoa don can xoa: ");
+                String maXoa = sc.nextLine();
+                dSachHoaDon.xoa(maXoa);
+                break;
+                case 5:
+                    System.out.print("Nhap ma hoa don can tim: ");
+                    String maTim = sc.nextLine();
+                    HoaDon kq = dSachHoaDon.timHD(maTim);
+                    if (kq != null) {
+                        System.out.println("Thong tin hoa don tim thay:");
+                        kq.hienThi();
+                    } else {
+                        System.out.println("Khong tim thay hoa don co ma " + maTim);
+                    }
+                    break;
+                case 6:
+                    System.out.print("Nhap ma nhan vien can tim: ");
+                    String maNV = sc.nextLine();
+                    HoaDon[] kqua = dSachHoaDon.timHDtheoNV(maNV);
+                    if (kqua != null) {
+                        for (HoaDon hoaDon : kqua) {
+                            hoaDon.hienThi();
+                        }
+                    } else {
+                        System.out.println("Khong tim thay hoa don co ma " + maNV);
+                    }
+                    break;
+            case 7:
+                dSachHoaDon.docFile();
+                break;
+            case 8:
+                dSachHoaDon.ghiFile();
+                break;
+            case 0:
+                System.out.println("Thoat menu hoa don...");
+                break;
+            default:
+                System.out.println("Lua chon khong hop le, vui long nhap lai!");
+        }
+        System.out.println();
+    } while (chon != 0);
+}
+
 }

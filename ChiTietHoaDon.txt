@@ -1,0 +1,20 @@
+HD001;TA001;Banh mi thit;2;15000.0
+HD001;TU001;Ca phe den da;1;25000.0
+HD002;TA002;Pho bo;1;40000.0
+HD002;TU005;Nuoc cam tuoi;2;30000.0
+HD003;TA003;Com tam suon bi;3;45000.0
+HD003;TU009;Coca Cola lon;2;15000.0
+HD004;TA005;Mi xao bo;1;42000.0
+HD004;TU004;Tra sua tran chau;2;40000.0
+HD006;TA006;Chao ga;1;30000.0
+HD006;TU007;Nuoc suoi Aquafina;3;10000.0
+HD007;TA009;Ga ran phan nho;2;50000.0
+HD007;TU010;Bia Heineken;2;25000.0
+HD008;TA010;Khoai tay chien;3;20000.0
+HD008;TU008;Pepsi lon;2;15000.0
+HD009;TA004;Bun cha Ha Noi;1;35000.0
+HD009;TU006;Sinh to bo;1;35000.0
+HD010;TA007;Banh bao nhan thit;4;12000.0
+HD010;TU003;Tra dao cam sa;2;35000.0
+hd010;TU003;Tra dao cam sa;10;35000.0
+hd010;TA003;Com tam suon bi;10;45000.0

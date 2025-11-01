@@ -42,6 +42,9 @@ public class ChiTietHoaDon {
     public void setMaSP(String maSP) {
         this.maSP = maSP;
     }
+    public void setTenSP(String tenSP) {
+        this.tenSP = tenSP;
+    }
     public void setSoLuong(int soLuong) {
         this.soLuong = soLuong;
     }

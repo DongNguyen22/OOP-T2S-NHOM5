@@ -48,7 +48,7 @@ public class DanhSachSanPham implements XuLiDuLieu{
    // tim san pham
    public SanPham timSPtheoMaSp(String key){
     for(SanPham sp : ds){
-        if(sp.getMaSP().equals(key)){
+        if(sp.getMaSP().equalsIgnoreCase(key)){
             return sp;
         }
     }
