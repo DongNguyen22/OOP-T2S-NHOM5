@@ -125,47 +125,6 @@ public class DanhSachHoaDon {
          }
 
         }
-         public void docFileHD(String tenfile)
-    {
-        try(BufferedReader br = new BufferedReader(new FileReader(tenfile))) {
-            dshd = new HoaDon[0];
-            n = 0;
-
-            String line;
-            while((line = br.readLine()) != null)
-            {
-                String[] parts = line.split(";");
-                String mahd = parts[0].trim();
-                String manv = parts[1].trim();
-                String makh = parts[2].trim();
-                LocalDate ngayhd = LocalDate.parse(parts[3].trim());
-
-                dshd = Arrays.copyOf(dshd, n + 1);
-                dshd[n] = new HoaDon(mahd, manv, makh, ngayhd);
-                n++;
-            }
-            System.out.println("Doc file thanh cong: " +tenfile);
-        } catch (IOException e) {
-            System.out.println("Loi khi doc file: " +e.getMessage());
-        }
-    }
-
-    public void ghiFileHD(String tenfile)
-    {
-        try(BufferedWriter bw = new BufferedWriter(new FileWriter(tenfile))) {
-            for(HoaDon hd : dshd)
-            {
-                bw.write(hd.getMaHD() +";"
-                    +hd.getMaNV() +";"
-                    +hd.getMaKH() +";"
-                    +hd.getNgayLaP());
-                bw.newLine();
-            }
-            System.out.println("Ghi file thanh cong: " +tenfile);
-        } catch (IOException e) {
-            System.out.println("Loi khi ghi file: " +tenfile);
-        }
-    }
-         
+        
 
 }
