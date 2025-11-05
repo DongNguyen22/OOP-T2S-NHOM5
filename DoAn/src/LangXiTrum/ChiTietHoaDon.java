@@ -6,44 +6,52 @@ public class ChiTietHoaDon {
     private String tenSP;
     private int soLuong;
     private double donGia;
-    //constructor
-    public ChiTietHoaDon(String maHD, String maSP,String tenSP, int soLuong, double donGia) {
+
+    public ChiTietHoaDon(String maHD, String maSP, String tenSP, int soLuong, double donGia) {
         this.maHD = maHD;
         this.maSP = maSP;
+        this.tenSP = tenSP;
         this.soLuong = soLuong;
         this.donGia = donGia;
-        this.tenSP=tenSP;
     }
-    //getter
-    public ChiTietHoaDon() {
+    public ChiTietHoaDon(String maHD, String maSP, String tenSP, int soLuong, double donGia , double ThanhTien) {
+        this.maHD = maHD;
+        this.maSP = maSP;
+        this.tenSP = tenSP;
+        this.soLuong = soLuong;
+        this.donGia = donGia;
     }
+
+    public ChiTietHoaDon(ChiTietHoaDon hd1) {
+        this.maHD=hd1.maHD;
+        this.maSP=hd1.maSP;
+        this.donGia=hd1.donGia;
+        this.soLuong=hd1.soLuong;
+        this.tenSP=hd1.tenSP;
+    }
+
     public String getMaHD() {
         return maHD;
     }
+
     public String getMaSP() {
         return maSP;
     }
+
+    public String getTenSP() {
+        return tenSP;
+    }
+
     public int getSoLuong() {
         return soLuong;
     }
-    public String getTenSP(){
-        return tenSP;
-    }
+
     public double getDonGia() {
         return donGia;
     }
-    public double getThanhTien(){
-        return this.soLuong*this.donGia;
-    }
-    //setter
-    public void setMaHD(String maHD) {
-        this.maHD = maHD;
-    }
-    public void setMaSP(String maSP) {
-        this.maSP = maSP;
-    }
-    public void setTenSP(String tenSP) {
-        this.tenSP = tenSP;
+
+    public double getThanhTien() {
+        return soLuong * donGia;
     }
     public void setSoLuong(int soLuong) {
         this.soLuong = soLuong;
@@ -51,14 +59,10 @@ public class ChiTietHoaDon {
     public void setDonGia(double donGia) {
         this.donGia = donGia;
     }
-    public void hienThi() {
-    System.out.printf("%-10s %-20s %5d %10.2f %12.2f\n",
-        maSP, tenSP, soLuong, donGia, getThanhTien());
-}
+    
 
-    @Override
-public String toString() {
-    return maHD + "," + maSP + "," + tenSP + "," + soLuong + "," + donGia;
-}
-
+    public void xuat() {
+        System.out.printf("%-10s %-10s %-10s %-10d %-10.2f %-10.2f\n",
+        maHD, maSP, tenSP, soLuong, donGia, getThanhTien());
+    }
 }
